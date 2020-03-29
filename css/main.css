@@ -1,0 +1,277 @@
+main .search {
+  color: white;
+  margin: 10px 0 0 20px;
+  font-size: 25px;
+}
+
+main .search label {
+  padding-right: 10px;
+}
+
+main .search input {
+  border-radius: 5px;
+  padding: 5px;
+  border: 2px solid #ff5e62;
+}
+
+main .search input[type="submit"] {
+  background-color: transparent;
+  color: white;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.box {
+  border: solid 1px white;
+  text-align: center;
+  border-radius: 10px;
+  height: 300px;
+  padding: 10px;
+  background-image: -webkit-gradient(linear, left top, right top, from(#ff9966), to(#ff5e62));
+  background-image: linear-gradient(to right, #ff9966, #ff5e62);
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  line-height: 250%;
+}
+
+.box h2 {
+  margin-bottom: 20px;
+}
+
+.box .format {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 100%;
+}
+
+.box span {
+  display: block;
+  font-size: 40px;
+}
+
+.box .mild {
+  color: #00e0ff;
+}
+
+.box .critical {
+  color: #e90606;
+}
+
+.box .recovered {
+  color: green;
+}
+
+.news-box .gradient-border {
+  background-image: -webkit-gradient(linear, left top, right top, from(red), to(purple));
+  background-image: linear-gradient(to right, red, purple);
+  padding: 0 0 0 3px;
+}
+
+.news-box-content {
+  background-color: #100E17;
+  padding: 0 10px;
+}
+
+.news-box-content .news {
+  padding: 10px;
+  position: relative;
+  line-height: 1.5;
+}
+
+.news-box-content .news h2 {
+  margin-bottom: 10px;
+  border-left: 2px solid yellow;
+  padding-left: 5px;
+}
+
+.news-box-content .news p {
+  padding-bottom: 20px;
+}
+
+.news-box-content .read-more a {
+  text-decoration: none;
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  right: 10px;
+  color: #e90606;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  background-color: #100E17;
+}
+
+body nav {
+  border-bottom: 2px solid rgba(189, 182, 182, 0.76);
+}
+
+body .navbar {
+  color: white;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 85%;
+  margin: auto;
+  padding: 15px;
+}
+
+body .navbar .phone {
+  width: 150px;
+  padding: 0;
+  margin: 0;
+}
+
+body .navbar .phone .fas {
+  float: left;
+  padding-right: 5px;
+  font-size: 19.33px;
+}
+
+body .navbar .phone p {
+  padding: 0;
+  display: inline-block;
+}
+
+body .navbar .phone .call {
+  text-decoration: none;
+  color: white;
+}
+
+body main {
+  padding: 10px;
+}
+
+body main h1.main-heading {
+  font-size: 32px;
+  font-weight: bolder;
+  color: white;
+  margin-top: 15px;
+  margin-left: 20px;
+  border-left: 3px solid #e90606;
+  padding-left: 5px;
+}
+
+body main .poland-stats {
+  border-radius: 10px;
+}
+
+body main .poland-stats .outer-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (max-width: 780px) {
+  body main .poland-stats .outer-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+body main .poland-stats .outer-container .inner-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  gap: 20px;
+  padding: 20px;
+  width: 60vw;
+}
+
+@media (max-width: 780px) {
+  body main .poland-stats .outer-container .inner-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 90vw;
+    margin: auto;
+    padding: 20px 0 0 0;
+  }
+}
+
+@media (max-width: 720px) {
+  body main .poland-stats .outer-container .inner-container {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+body main .poland-stats .outer-container .news-box {
+  padding-top: 20px;
+}
+
+body main .poland-stats .outer-container .news-box-content {
+  width: 35vw;
+  height: 580px;
+  color: white;
+  overflow: scroll;
+}
+
+@media (max-width: 780px) {
+  body main .poland-stats .outer-container .news-box-content {
+    width: initial;
+  }
+}
+
+body main .poland-stats .outer-container .news-box-content::-webkit-scrollbar {
+  display: none;
+}
+
+body main footer {
+  color: white;
+  text-align: center;
+  margin: 20px 0;
+}
+
+body main footer .footer-name {
+  color: #ff9966;
+}
+/*# sourceMappingURL=main.css.map */

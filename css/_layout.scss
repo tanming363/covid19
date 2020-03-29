@@ -1,0 +1,140 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+body {
+    background-color: #100E17;
+    nav {
+        border-bottom: 2px solid rgba(189, 182, 182, 0.76);
+    }
+    .navbar {
+        color: white;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 85%;
+        margin: auto;
+        padding:15px ;
+
+
+        .phone {
+
+            width: 150px;
+            padding: 0;
+            margin: 0;
+
+            .fas {
+                float: left;
+                padding-right: 5px;
+                font-size: 19.33px;
+
+            }
+
+            p {
+                padding: 0;
+                display: inline-block;
+            }
+
+            .call {
+                text-decoration: none;
+                color: white;
+            }
+        }
+
+    }
+
+
+    main {
+        padding: 10px;
+        h1.main-heading {
+            font-size: 32px;
+            font-weight: bolder;
+            color: $textcolor;
+            // text-transform: uppercase;
+            margin-top: 15px;
+            margin-left: 20px;
+            border-left: 3px solid #e90606;
+            padding-left: 5px;
+
+            // background: -webkit-linear-gradient(left,#000046, #1CB5E0);
+            // -webkit-background-clip: text;
+            // -webkit-text-fill-color: transparent;
+            
+
+        }
+
+        .poland-stats {
+
+            border-radius: 10px;
+            // height: 100vh;
+    
+    
+            .outer-container {
+                @include flex(row,stretch,space-between);
+                
+                @media (max-width:780px) {
+                    flex-direction: column;
+                   
+                }
+                
+    
+                .inner-container {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    grid-template-rows: auto;
+                    gap: 20px;
+                    padding: 20px;
+                    width: 60vw;
+                    // margin: auto;
+                    @media (max-width:780px) {
+                        flex-direction: column;
+                        width: 90vw;
+                        margin: auto;
+                        padding: 20px 0 0 0;
+                    }
+    
+                    @media (max-width:720px) {
+                        grid-template-columns: 1fr;
+                    }
+                    
+                }
+    
+                .news-box {
+                    padding-top: 20px;
+                }
+    
+                .news-box-content {
+                    width: 35vw;
+                    height: 580px;
+                    color: white;
+                    overflow: scroll;
+    
+                    @media (max-width:780px) {
+    
+                        width:initial;
+                    }
+                }
+    
+                
+                .news-box-content::-webkit-scrollbar {
+                    display: none;
+                }
+            }
+            
+        }
+
+        footer {
+            color: white;
+            text-align: center;
+            margin: 20px 0;
+
+            .footer-name {
+                color: #ff9966;
+            }
+        }
+    }
+    
+}

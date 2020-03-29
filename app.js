@@ -74,7 +74,7 @@ function data(body) {
 
 let polandNews = new News();
 
-polandNews.get('http://newsapi.org/v2/top-headlines?country=pl&apiKey=da3e10e7f20b4b068309092b85f2c476').then(articles).catch(err =>console.log(err));
+polandNews.get('https://newsapi.org/v2/top-headlines?country=pl&apiKey=da3e10e7f20b4b068309092b85f2c476').then(articles).catch(err =>console.log(err));
 
 function articles(body) {
 	let output = ''

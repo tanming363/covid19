@@ -1,76 +1,153 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1">
-    <title>COVID19-Poland</title>
-    <link rel="stylesheet" href="css/main.css">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="../frontend/scss/main.css">
     <link rel="shortcut icon" type="image/png" href="ms-icon-70x70.png">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/5d723e3ac3.js" crossorigin="anonymous"></script>
-    <script data-ad-client="ca-pub-6162779699458412" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script data-ad-client="ca-pub-6162779699458412" async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <title>COVID19-Poland</title>
 </head>
-<body>
-    <nav>
-        <div class="navbar">
-            <h2 style="color: white;">COVID-19</h3>
-            <div class="phone">
-                <i class="fas fa-phone-square"></i>
-                <p> <a href="tel:800-190-590" class="call">800 190 590</a></p>
+
+<body class="bg-my-dark text-white">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-my-dark">
+        <a class="navbar-brand">COVID-19</a>
+        <div class="spacer"></div>
+        <span>
+            <i class="fas fa-phone-square text-white"></i>&nbsp;<a href="tel:800-190-590" class="text-white">800 190
+                590</a>
+        </span>
+    </nav>
+    
+    <br>
+    <div class="row m-3">
+        <div class="col-sm-6"><h4 class="text-white"><i class="fas fa-globe"></i>&nbsp;<abbr title="">POLAND</abbr></h4></div>
+        <div class="col-sm-6">
+            <div class="form-group row">
+                <div class="col ml-auto">
+                    <input type="text" placeholder="&nbsp;&nbsp;Enter a country name"
+                        class="form-control border border-light rounded" id="country">
+                </div>
+                <button type="submit" class="btn btn-outline-light search-btn">Search</button>
             </div>
         </div>
-    </nav>
-    <main>
-        <h1 class="main-heading">Poland Stats</h1>
-        <form class="search">
-            <label >Search by Country</label>
-            <input type="text" placeholder="Enter a Country Name" class="country-name">
-            <input type="submit" value="Search">
-        </form>
-        <div class="poland-stats">
-            <div class="outer-container">
-                <div class="inner-container">
-                    <div class="todat-stats box">
-                        <h2>Today's Stats</h2>
-                        <h3 class="new-cases-value"></h3>
-                        <h3 class="new-deaths-value"></h3>
-                    </div>
-                    <div class="total-cases box">
-                        <h2>Total Cases</h2>
-                        <div class="format">
-                            <h3 class="total-cases-value"></h3>
-                            <h3 class="total-deaths-value"></h3>
-                        </div>
-                        <h3 class="total-recovered-value"></h3>
-                    </div>
-                    <div class="condition box">
-                        <h2>Condition</h2>
-                        <h3 class="mild-condition-value"></h3>
-                        <h3 class="critical-condition-value"></h3>
-                    </div>
-                    <div class="silesian-vivodship box">
-                        <h2>Silesian Vivodship Cases</h2>
-                        <h3>Total Cases: <span>203</span></h3>
-                        <h3>Total Deaths:<span class="critical">6</span></h3>
-                    </div>
-                </div>
-                <div class="news-box">
-                    <div class="gradient-border">
-                        <h1>Health News</h1>
 
-                        <div class="news-box-content" >
-                            
+    </div>
+
+    <div class="m-4">
+        <div class="row justify-content-between">
+            <!-- left side -->
+            <div class="col-sm-7 p-1">
+                <div class="row justify-content-between">
+                    <div class="col-sm">
+                        <!--  -->
+                        <div class="card bg-my-dark-card card-box mb-3  pt-0">
+                            <br>
+                            <h6 class="mb-2 text-uppercase">
+                                <abbr title="">TODAY'S STATUS</abbr>
+                            </h6>
+                            <li>
+                                <span class="new-cases-value my-primary rounded"></span>
+                            </li>
+                            <li class="mt-2">
+                                <span class="new-deaths-value my-danger rounded"></span>
+                            </li>
+                            <div class="progress rounded-0 mt-3" style="height: 5px;">
+                                <div class="progress-bar bg-primary" style="width: 100%;"></div>
+                            </div>
+                        </div>
+                        <!--  -->
+                        <div class="card bg-my-dark-card card-box mb-3  pt-0">
+                            <br>
+                            <h6 class="mb-2 text-uppercase"><abbr title="">Total Cases </abbr> </h6>
+                            <div class="format">
+                                <li>
+                                    <span class="total-cases-value my-primary rounded"></span>
+                                </li>
+                                <li class="mt-2">
+                                    <span class="total-deaths-value  my-danger rounded"></span>
+                                </li>
+                            </div>
+                            <li class="mt-2">
+                                <span class="total-recovered-value  my-success rounded"></span>
+                            </li>
+                            <div class="progress rounded-0 mt-3" style="height: 5px;">
+                                <div class="progress-bar bg-primary" style="width: 100%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--  -->
+                    <div class="col-sm">
+                        <div class="card bg-my-dark-card card-box mb-3  pt-0">
+                            <br>
+                            <h6 class="mb-2 text-uppercase"><abbr title="">Condition</abbr></h6>
+                            <li>
+                                <span class="mild-condition-value my-primary rounded"></span>
+                            </li>
+                            <li class="mt-2">
+                                <span class="critical-condition-value my-warning rounded"></span>
+                            </li>
+                            <div class="progress rounded-0 mt-3" style="height: 5px;">
+                                <div class="progress-bar bg-primary" style="width: 100%;"></div>
+                            </div>
+                        </div>
+                        <!--  -->
+                        <div class="card bg-my-dark-card card-box mb-3  pt-0">
+                            <br>
+                            <h6 class="mb-2 text-uppercase"><abbr title="">Silesian Vivodship Cases</abbr></h6>
+
+                            <li> <span class="my-primary rounded">Total Cases:203</span></li>
+
+                            <li class="mt-2">
+                                <span class="my-danger rounded">Total Deaths: 6</span>
+                            </li>
+
+                            <div class="progress rounded-0 mt-3" style="height: 5px;">
+                                <div class="progress-bar bg-primary" style="width: 100%;"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
+            </div>
+
+            <!-- right side -->
+            <div class="col-sm-5 p-1">
+                <div class="card bg-my-dark-card card-box  pt-0">
+                    <br>
+                    <h4 class="mb-2"><abbr title="">Health News</abbr></h4>
+                    <div class="news-box-content">
+
+                    </div>
+                </div>
+            </div>
         </div>
-        <footer>
-            <h4>Designed and Developed by <span class="footer-name">Karthik Bethi</span></h3>
-        </footer>
-    </main>
-    
+    </div>
+    <hr class="bg-my-gray mb-2">
 
+    <footer class="text-center mb-2 mt-0">
+        <small>Designed and Developed by <span class="text-warning">Karthik Bethi</span><small>
+    </footer>
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
     <script src="app.js"></script>
-    
 </body>
+
 </html>

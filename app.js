@@ -327,10 +327,7 @@ function submitData(e) {
 		if(country === data3) {
 			data4 = data3;
 			document.querySelector('.main-heading').innerText = `${data3} Stats` ;
-			
 			document.querySelector('.main-heading').style.textTransform = "capitalize";
-			document.querySelector('.main-heading').style.transition = `all 2000ms ease 0s` ;
-			document.querySelector('.warning-message').style.display = 'none';
 
 			let dataCovid = new Covid();
 			if (data3 ===''){
